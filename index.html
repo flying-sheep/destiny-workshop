@@ -6,18 +6,33 @@
 <link rel=stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.min.css">
 <link rel=stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
 <script>hljs.initHighlightingOnLoad()</script>
-<style>body {margin: auto; max-width: 42em}</style>
+<style>
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+</style>
 
+<main>
 <h1>destiny workshop</h1>
 
 <ol>
 <li>Install <a href="https://jupyterlab.readthedocs.io/en/latest/getting_started/installation.html">JupyterLab</a>
 <li>Install the necessary R packages
 <pre><code class=r>source('https://bioconductor.org/biocLite.R')
-BiocInstaller::biocLite(c('destiny', 'devtools', 'tidyverse', 'Cairo', 'M3Drop',
-                          'SingleCellExperiment', 'pheatmap', 'viridis'))
+BiocInstaller::biocLite(c(
+	'destiny', 'devtools', 'tidyverse', 'Cairo', 'M3Drop',
+	'SingleCellExperiment', 'pheatmap', 'viridis'))
 devtools::install_github('IRkernel/IRkernel')
 IRkernel::installspec()</code></pre>
 <li>Download the <a href="https://raw.githubusercontent.com/flying-sheep/destiny-workshop/master/destiny-workshop.ipynb">Exercise sheet</a>
 <li>Run <code>jupyter lab destiny-workshop.ipynb</code>
 </ol>
+</main>
